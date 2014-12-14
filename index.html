@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="format-detection" content="telephone=no"/>
+	<meta name="msapplication-tap-highlight" content="no"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="js/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<title>Torrent Me</title>
+</head>
+<body>
+
+<div data-role="page" id="home">
+	<div data-role="header" data-theme="b">
+		<h1>Search Torrent</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<div class="search_bar">
+			<div class="ui-block-a">
+				<div class="ui-body ui-body-d" style="margin: 0; padding: 0">
+					<input type="search" id="search_field" data-wrapper-class="ui-custom" placeholder="Search here.." name="search">
+				</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-body ui-body-d">
+					<a href="#" class="ui-btn ui-mini" id="search" style="margin: 0;padding: 10px;">Search</a>
+				</div>
+			</div>
+		</div>
+		<div style="clear: both;"></div>
+
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<select name="order_by" id="order_by" data-shadow="false" data-mini="true">
+					<option value="none">Order by</option>
+					<option value="size-asc">Size Asc</option>
+					<option value="size-desc">Size Desc</option>
+					<option value="files_count-asc">File Asc</option>
+					<option value="files_count-desc">File Desc</option>
+					<option value="time_add-asc">Age Asc</option>
+					<option value="time_add-desc">Age Desc</option>
+					<option value="seeders-asc">Seed Asc</option>
+					<option value="seeders-desc">Seed Desc</option>
+					<option value="leechers-asc">Leech Asc</option>
+					<option value="leechers-desc">Leech Desc</option>
+				</select>
+			</div>
+			<div class="ui-block-b"><button id="prev" class="ui-shadow ui-mini ui-btn">Previous</button></div>
+			<div class="ui-block-c"><button id="next" class="ui-shadow ui-mini ui-btn">Next</button></div>
+		</div>
+
+		<ul data-role="listview" data-inset="true" id="list_placeholder" style="margin: 0">
+			<li>No results.</li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script src="js/lib/jquery-2.1.1.min.js"></script>
+<script src="js/lib/jquery.lazyload.min.js"></script>
+<script src="js/lib/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/lib/jquery.mobile.onpage.js"></script>
+<script src="js/app.js"></script>
+<script src="js/view.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+	app.initialize();
+</script>
+</body>
+</html>
